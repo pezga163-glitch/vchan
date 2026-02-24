@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собаки vs Кошки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .card {
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .dog-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .cat-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        .card h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card ul {
+            list-style: none;
+        }
+        .card li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        .card li:last-child {
+            border-bottom: none;
+        }
+        .vs {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .comparison-wrapper {
+            position: relative;
+        }
+        .fun-facts {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .fun-facts h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .fun-facts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .fact {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .conclusion {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            border-radius: 15px;
+            color: white;
+        }
+        .conclusion h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .conclusion p {
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+        .photo-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .photo-section img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .emoji {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="emoji">🐕</span> Собаки vs Кошки <span class="emoji">🐈</span></h1>
+        <p class="subtitle">Великое противостояние двух самых популярных домашних питомцев</p>
+
+        <div class="comparison-wrapper">
+            <div class="comparison">
+                <div class="card dog-card">
+                    <h2><span class="emoji">🐕</span> Собаки</h2>
+                    <ul>
+                        <li><strong>Верные друзья:</strong> Собаки известны своей преданностью и любовью к хозяину</li>
+                        <li><strong>Социальные:</strong> Любят общение и проводить время с семьей</li>
+                        <li><strong>Активные:</strong> Нуждаются в регулярных прогулках и физических нагрузках</li>
+                        <li><strong>Обучаемые:</strong> Легко поддаются дрессировке и обучению командам</li>
+                        <li><strong>Защитники:</strong> Многие породы отлично охраняют дом</li>
+                        <li><strong>Шумные:</strong> Могут лаять, скулить и выражать эмоции голосом</li>
+                        <li><strong>Требуют внимания:</strong> Нуждаются в постоянном взаимодействии с человеком</li>
+                    </ul>
+                </div>
+                <div class="card cat-card">
+                    <h2><span class="emoji">🐈</span> Кошки</h2>
+                    <ul>
+                        <li><strong>Независимые:</strong> Ценят свою свободу и личное пространство</li>
+                        <li><strong>Аккуратные:</strong> Сами моются и приучены к лотку</li>
+                        <li><strong>Тихие:</strong> Мяукают намного реже, чем собаки лают</li>
+                        <li><strong>Компактные:</strong> Идеально подходят для квартир</li>
+                        <li><strong>Охотники:</strong> Сохраняют инстинкты хищников</li>
+                        <li><strong>Мурлыкают:</strong> Звук мурлыканья успокаивает и снижает стресс</li>
+                        <li><strong>Самодостаточные:</strong> Могут оставаться одни на более долгое время</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="fun-facts">
+            <h3><span class="emoji">📊</span> Интересные факты</h3>
+            <div class="fun-facts-grid">
+                <div class="fact">
+                    <strong>Собаки:</strong> У них более 220 миллионов обонятельных рецепторов (у человека всего 5 миллионов)
+                </div>
+                <div class="fact">
+                    <strong>Кошки:</strong> Могут прыгать в высоту до 6 раз длины своего тела
+                </div>
+                <div class="fact">
+                    <strong>Собаки:</strong> Различают около 250 слов и жестов
+                </div>
+                <div class="fact">
+                    <strong>Кошки:</strong> Спят в среднем 12-16 часов в сутки
+                </div>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <h2><span class="emoji">💚</span> Вывод</h2>
+            <p>
+                Неважно, кого вы выберете — собаку или кошку. Все они крутые! <span class="emoji">🌟</span><br>
+                Каждое животное уникально и приносит в нашу жизнь радость, любовь и тепло.<br>
+                Главное — это забота, любовь и внимание, которые мы им дарим.<br><br>
+                <strong>Любите своих питомцев! <span class="emoji">❤️</span></strong>
+            </p>
+        </div>
+
+        <div class="photo-section">
+            <img src="изображение кирилл.png" alt="Фотография">
+        </div>
+    </div>
+</body>
+</html>
